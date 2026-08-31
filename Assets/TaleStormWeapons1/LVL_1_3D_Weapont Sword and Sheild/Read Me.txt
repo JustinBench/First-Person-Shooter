@@ -1,0 +1,43 @@
+TaleStorm Weapons Pack – Level 1
+Overview
+This package contains a set of four stylized medieval weapons and shields optimized for Unity projects. Each asset is low‑poly friendly, cleanly textured, and ready to use in fantasy or RPG environments.
+
+Contents
+Falchion – curved single‑edged sword
+
+Short Sword – compact straight blade
+
+Round Shield – classic circular defense
+
+Kite Shield – tall, angular shield
+
+Included files:
+
+FBX/ – 3D models
+
+Materials/ – base material setup
+
+Textures/ – shared texture pack
+
+Prefabs/ – Unity prefabs for drag‑and‑drop use
+
+Scene/ – demo scene (lvl_1_Weapon Scene.unity)
+
+Features
+Clean topology, matte finish
+
+Orthographic‑friendly design for blueprint workflows
+
+Compatible with Unity 2021.3+ (URP/HDRP tested)
+
+Organized folder structure for easy integration
+
+Usage
+Import the .unitypackage into your Unity project.
+
+Drag prefabs (e.g., Falchion.prefab, KiteShield.prefab) into your scene.
+
+Adjust materials or textures as needed for your pipeline.
+
+License
+For use in commercial and non‑commercial Unity projects. Redistribution of raw files outside the Unity Asset Store is not permitted.
