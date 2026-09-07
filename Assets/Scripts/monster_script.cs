@@ -1,3 +1,4 @@
+using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
 
@@ -8,11 +9,21 @@ public class Monster : MonoBehaviour
     public GameObject distraction;
     public float detectionRadius = 0f;
     public float distractionRadius = 0f;
+    //public bool deathByBanana = false;
     private Animator anim;
+    private Health health;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        health = GetComponent<Health>();
+        health.OnDie += Death;
+        health.Invincible = true;
+    }
+
+    void Death()
+    {
+        anim.SetTrigger("Dies");
     }
 
     // Update is called once per frame
@@ -21,14 +32,14 @@ public class Monster : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         float distractionDistance = Vector3.Distance(transform.position, distraction.transform.position);
 
-        if (distance <= detectionRadius && distractionDistance > distractionRadius)
-        {
+        Debug.Log(health.Invincible);
+
+        if (distance <= detectionRadius && distractionDistance > distractionRadius) {
             anim.SetTrigger("Threatened");
-        } else if (distractionDistance <= distractionRadius)
-        {
+            health.Invincible = false;
+        } else if (distractionDistance <= distractionRadius) {
             anim.SetTrigger("Distracted");
-        } else
-        {
+        } else {
             anim.SetTrigger("Idle");
         }
     }
