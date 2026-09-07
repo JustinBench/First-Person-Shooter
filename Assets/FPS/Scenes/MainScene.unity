@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonZombie
   player: {fileID: 2729281214152228921}
-  distraction: {fileID: 606188643}
+  distraction: {fileID: 1588577290}
   detectionRadius: 8
   distractionRadius: 15
 --- !u!4 &927465903 stripped
@@ -1339,6 +1339,137 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2729281214124946789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1588577289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 185865645826707467, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_Name
+      value: Banana_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.8812556
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.8812556
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.8812556
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.367
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.656
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711431840816384689, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 185865645826707467, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1588577292}
+    - targetCorrespondingSourceObject: {fileID: 185865645826707467, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1588577291}
+  m_SourcePrefab: {fileID: 100100000, guid: 0a05d6a1fad5b924ab7c42aaa4dae685, type: 3}
+--- !u!1 &1588577290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 185865645826707467, guid: 0a05d6a1fad5b924ab7c42aaa4dae685,
+    type: 3}
+  m_PrefabInstance: {fileID: 1588577289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1588577291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588577290}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 0.075, z: 0.1}
+  m_Center: {x: 0.0073702144, y: 0.03754578, z: 0.00069684157}
+--- !u!114 &1588577292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588577290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0347ba29f455246a200b4fc3ecc747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::banana_script
+  pushDistance: 2
 --- !u!1 &1603278495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,7 +1804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonZombie
   player: {fileID: 2729281214152228921}
-  distraction: {fileID: 606188643}
+  distraction: {fileID: 1588577290}
   detectionRadius: 5
   distractionRadius: 8
 --- !u!4 &2091206812 stripped
@@ -5785,3 +5916,4 @@ SceneRoots:
   - {fileID: 2729281214382627287}
   - {fileID: 2110939015}
   - {fileID: 1163569351}
+  - {fileID: 1588577289}
