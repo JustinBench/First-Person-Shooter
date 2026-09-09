@@ -18,7 +18,6 @@ public class banana_script : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision detected!");
         if (other.CompareTag("Player"))
         {
             Vector3 pushDirection = transform.position - other.transform.position;

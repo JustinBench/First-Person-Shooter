@@ -7,9 +7,11 @@ public class Monster : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject player;
     public GameObject distraction;
+    public GameObject weakness;
     public float detectionRadius = 0f;
     public float distractionRadius = 0f;
-    //public bool deathByBanana = false;
+    public bool deathByWeakness = false;
+    public float weaknessRadius = 1.0f;
     private Animator anim;
     private Health health;
 
@@ -30,25 +32,41 @@ public class Monster : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        float distractionDistance = Vector3.Distance(transform.position, distraction.transform.position);
+        float distractionDistance = distractionRadius * 2;
 
-        Debug.Log(health.Invincible);
-
-        if (distance <= detectionRadius && distractionDistance > distractionRadius) {
-            anim.SetTrigger("Threatened");
-            health.Invincible = false;
-        } else if (distractionDistance <= distractionRadius) {
-            anim.SetTrigger("Distracted");
-        } else {
-            anim.SetTrigger("Idle");
+        if (distraction != null)
+        {
+            distractionDistance = Vector3.Distance(transform.position, distraction.transform.position);
         }
-    }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (weakness != null && deathByWeakness)
+        {
+            float weaknessDistance = Vector3.Distance(transform.position, weakness.transform.position);
+            if (weaknessDistance <= weaknessRadius)
+            {
+                anim.SetTrigger("Weakened");
+                health.Invincible = false;
+                health.TakeDamage(1, weakness);
+                health.Invincible = true;
+            }
+        }
+
+        if (distance <= detectionRadius && ((distraction != null && distractionDistance > distractionRadius) || distraction == null))
         {
             anim.SetTrigger("Threatened");
+            if (deathByWeakness == false)
+            {
+                health.Invincible = false;
+            }
         }
-    }*/
+        else if (distraction != null && distractionDistance <= distractionRadius)
+        {
+            anim.SetTrigger("Distracted");
+        }
+        else
+        {
+            anim.SetTrigger("Idle");
+            health.Invincible = true;
+        }
+    }
 }
