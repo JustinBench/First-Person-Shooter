@@ -26,7 +26,7 @@ public class Monster : MonoBehaviour
     void Death()
     {
         anim.SetTrigger("Dies");
-        Destroy(gameObject, 15f);
+        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame
